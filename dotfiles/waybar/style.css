@@ -1,0 +1,129 @@
+
+* {
+  /* `otf-font-awesome` is required to be installed for icons */
+  font-family: 'SF Pro Text', sans-serif;
+  font-size: 13px;
+}
+
+window#waybar {
+  background-color: rgba(30, 35, 38, 0.2);
+  color: #d3c6aa;
+  transition-property: background-color;
+  transition-duration: .5s;
+}
+
+window#waybar.hidden {
+  opacity: 0.2;
+}
+
+/*
+window#waybar.empty {
+  background-color: transparent;
+}
+window#waybar.solo {
+  background-color: #FFFFFF;
+}
+*/
+
+window#waybar.termite {
+  background-color: #3F3F3F;
+}
+
+window#waybar.chromium {
+  background-color: #000000;
+  border: none;
+}
+
+button {
+  /* Use box-shadow instead of border so the text isn't offset */
+  box-shadow: inset 0 -1px transparent;
+  /* Avoid rounded borders under each button name */
+  border: none;
+  border-radius: 0;
+}
+
+/* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
+button:hover {
+  background: inherit;
+  box-shadow: inset 0 -1px #a7c080;
+}
+
+#workspaces button {
+  padding: 0 6px;
+  background-color: transparent;
+  color: #d3c6aa;
+}
+
+#workspaces button:hover {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+#workspaces button.active {
+  color: #a7c080;
+  background-color: #232a2e;
+}
+
+#workspaces button.urgent {
+  color: #e67e8c;
+}
+
+#clock,
+#battery,
+#cpu,
+#memory,
+#disk,
+#temperature,
+#backlight,
+#network,
+#pulseaudio,
+#wireplumber,
+#custom-media,
+#tray,
+#mode,
+#idle_inhibitor,
+#scratchpad,
+#mpd {
+  padding: 0 10px;
+  margin-top: 3px;
+  margin-bottom: 3px;
+  color: #ebdbb2;
+  border-radius: 1px;
+}
+
+#window,
+#workspaces {
+  margin: 0 4px;
+}
+
+/* If workspaces is the leftmost module, omit left margin */
+.modules-left > widget:first-child > #workspaces {
+  margin-left: 0;
+}
+
+/* If workspaces is the rightmost module, omit right margin */
+.modules-right > widget:last-child > #workspaces {
+  margin-right: 0;
+}
+
+@keyframes blink {
+  to {
+      background-color: #ffffff;
+      color: #000000;
+  }
+}
+
+#scratchpad {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+#memory, #clock {
+  margin-top: 10px;
+}
+
+#custom-power {
+   padding-right: 20px;
+}
+
+#scratchpad.empty {
+background-color: transparent;
+}
