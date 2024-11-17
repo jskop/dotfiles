@@ -5,7 +5,8 @@
         "hyprland/window"
     ],
     "modules-left": [
-        "hyprland/workspaces"
+        "hyprland/workspaces",
+	"custom/spotify"
     ],
     "modules-right": [
         "bluetooth",
@@ -26,8 +27,8 @@
         "capslock": true,
         "format": "{name} {icon}",
         "format-icons": {
-            "locked": "",
-            "unlocked": ""
+            "locked": " ",
+            "unlocked": " "
         }
     },
     "hyprland/window": {
@@ -111,5 +112,12 @@
         "format": " ⏻ ",
         "tooltip": false,
         "on-click": "wlogout --protocol layer-shell"
+    },
+    "custom/spotify": {
+	"format": " {}",
+	"return-type": "json",
+	"on-click": "playerctl -p spotify play-pause",
+	"on-click-right": "playerctl -p spotify next",
+	"exec": "~/.config/waybar/scripts/spotify.sh"
     }
 }
