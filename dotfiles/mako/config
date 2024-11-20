@@ -1,0 +1,11 @@
+sort=-time
+layer=overlay
+default-timeout=3000
+border-radius=15
+background-color=#282828cc
+[urgency=hidh]
+border-color=#8f1010
+default-timeout=0
+[category=mpd]
+default-timeout=2000
+group-by=category

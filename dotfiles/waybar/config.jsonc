@@ -6,7 +6,7 @@
     ],
     "modules-left": [
         "hyprland/workspaces",
-	"custom/spotify"
+        "custom/spotify"
     ],
     "modules-right": [
         "bluetooth",
@@ -20,7 +20,8 @@
     "bluetooth": {
         "format": " {status}",
         "format-connected": " {device_alias}",
-        "format-connected-battery": " {device_alias} {device_battery_percentage}%"
+        "format-connected-battery": " {device_alias} {device_battery_percentage}%",
+        "on-click": "blueman-manager"
     },
     "keyboard-state": {
         "numlock": true,
@@ -114,10 +115,11 @@
         "on-click": "wlogout --protocol layer-shell"
     },
     "custom/spotify": {
-	"format": " {}",
-	"return-type": "json",
-	"on-click": "playerctl -p spotify play-pause",
-	"on-click-right": "playerctl -p spotify next",
-	"exec": "~/.config/waybar/scripts/spotify.sh"
+        "format": " {}",
+        "return-type": "json",
+        "on-click": "playerctl -p spotify play-pause",
+        "on-click-right": "playerctl -p spotify next",
+        "exec": "~/.config/waybar/scripts/spotify.sh",
+        "interval": 3
     }
 }
