@@ -5,8 +5,10 @@ local km = vim.keymap
 km.set("i", "<C-s>", "<ESC>:w<CR>", { desc = "Save file in insert mode" })
 km.set("n", "<C-e>", ":Ex<CR>", { desc = "Open explorer" })
 km.set("n", "<C-A-n>h", ":nohl<CR>", { desc = "Clear search highlights" })
-km.set("n", "<C-q>", ":q!<CR>", { desc = "Quit" })
-km.set("i", "<C-q>", "<ESC>:q!<CR>", { desc = "Quit without saving" })
+km.set("n", "<C-q>", ":q<CR>", { desc = "Quit" })
+km.set("i", "<C-q>", "<ESC>:q<CR>", { desc = "Quit without saving" })
+km.set({ "n", "v" }, "<C-q><C-q>", ":wqa<CR>", { desc = "Quit without saving" })
+km.set("i", "<C-q><C-q>", "<ESC>:wqa<CR>", { desc = "Quit without saving" })
 km.set("n", "<C-S-i>", "<C-a>", { desc = "Increment number" })
 km.set("n", "<C-S-d>", "<C-x>", { desc = "Increment number" })
 
@@ -20,3 +22,5 @@ km.set("n", "<leader>tx", ":tabclose<CR>", { desc = "Open new tab" })
 km.set("n", "<leader>tn", ":tabn<CR>", { desc = "Open new tab" })
 km.set("n", "<leader>tp", ":tabp<CR>", { desc = "Open new tab" })
 km.set("n", "<leader>tf", ":tabnew %<CR>", { desc = "Open new tab" })
+
+km.set({ "n", "i" }, "<C-E>", ":NvimTreeOpen<CR>", { desc = "Open explorer" })
