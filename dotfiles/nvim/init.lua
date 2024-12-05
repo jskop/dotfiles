@@ -1,3 +1,2 @@
-require("jskop.core")
+require("jskop.config")
 require("jskop.lazy")
-

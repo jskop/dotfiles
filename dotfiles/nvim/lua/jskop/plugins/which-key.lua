@@ -10,4 +10,13 @@ return {
     -- or leave it empty to use the default settings
     -- refer to the configuration section below
   },
+  keys = {
+    {
+      "<C-w><C-k>",
+      function()
+        require("which-key").show({ global = true })
+      end,
+      desc = "Global keys",
+    }
+  }
 }
