@@ -1,7 +1,7 @@
-function get_html_capabilities()
+local function get_html_capabilities()
  local capabilities = vim.lsp.protocol.make_client_capabilities()
   capabilities.textDocument.completion.completionItem.snippetSupport = true
- return capabilities 
+ return capabilities
 end
 
   require("mason").setup()
@@ -47,7 +47,7 @@ end
     settings = {
       ['rust-analyzer'] = {
         diagnostics = {
-          enable = false,
+          enable = true,
         }
       }
     }

@@ -9,7 +9,7 @@ return {
   {
     "williamboman/mason-lspconfig.nvim",
     config = function()
-      require("jskop.plugins.config.lsp")      
+      require("jskop.plugins.config.lsp")
     end,
   }
 }
